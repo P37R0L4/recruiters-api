@@ -1,0 +1,22 @@
+type Game {
+  _id: ID!
+  position: Int
+  started: Boolean
+  minigamePoints: Int
+}
+
+type Query {
+  game(id: String!): Game!
+}
+
+input GamesInput {
+  position: Int!
+  started: Boolean!
+  minigamePoints: Int!
+}
+
+type Mutation {
+  createGame(data: GamesInput): Game
+  updateGame(id: ID!, data: GamesInput): Game
+  deleteGame(id: ID!): Boolean
+}
