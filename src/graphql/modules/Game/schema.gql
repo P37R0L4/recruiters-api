@@ -19,6 +19,6 @@ input GamesInput {
 
 type Mutation {
   createGame(data: GamesInput!): Game
-  updateGame(idRecruiter: ID!, data: GamesInput!): Game
+  updateGame(id: ID!, data: GamesInput!): Game
   deleteGame(id: ID!): Boolean
 }
