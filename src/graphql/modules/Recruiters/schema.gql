@@ -18,8 +18,13 @@ input RecruitersInput {
   comment: String!
 }
 
+input RecruitersInputUpdate {
+  grade: Int!
+  comment: String!
+}
+
 type Mutation {
-  createRecruiter(data: RecruitersInput): Recruiter
-  updateRecruiter(id: ID!, data: RecruitersInput): Recruiter
+  createRecruiter(values: RecruitersInput): Recruiter
+  updateRecruiter(id: ID!, values: RecruitersInputUpdate): Recruiter
   deleteRecruiter(id: ID!): Boolean
 }

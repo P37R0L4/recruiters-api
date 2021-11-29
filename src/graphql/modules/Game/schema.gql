@@ -1,22 +1,24 @@
 type Game {
   _id: ID!
+  idRecruiter: String!
   position: Int
   started: Boolean
   minigamePoints: Int
 }
 
 type Query {
-  game(id: String!): Game!
+  game(idRecruiter: String!): Game!
 }
 
 input GamesInput {
-  position: Int!
-  started: Boolean!
-  minigamePoints: Int!
+  position: Int
+  started: Boolean
+  minigamePoints: Int
+  idRecruiter: String!
 }
 
 type Mutation {
-  createGame(data: GamesInput): Game
-  updateGame(id: ID!, data: GamesInput): Game
+  createGame(data: GamesInput!): Game
+  updateGame(idRecruiter: ID!, data: GamesInput!): Game
   deleteGame(id: ID!): Boolean
 }

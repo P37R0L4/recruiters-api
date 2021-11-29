@@ -6,10 +6,10 @@ export default {
     recruiter: async (_: any, { id }: any) => await Recruiters.findById(id),
   },
   Mutation: {
-    createRecruiter: async (_: any, { data }: any) =>
-      await Recruiters.create(data),
-    updateRecruiter: async (_: any, { data, id }: any) =>
-      await Recruiters.findOneAndUpdate(id, data, { new: true }),
+    createRecruiter: async (_: any, { values }: any) =>
+      await Recruiters.create(values),
+    updateRecruiter: async (_: any, { values, id }: any) =>
+      await Recruiters.findOneAndUpdate(id, values, { new: true }),
     deleteRecruiter: async (_: any, { id }: any) =>
       !!(await Recruiters.findOneAndDelete(id)),
   },

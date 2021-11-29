@@ -10,7 +10,10 @@ export function startServer(typeDefs: any, resolvers: any) {
       useNewUrlParser: true,
     };
 
-  const server = new ApolloServer({ typeDefs, resolvers });
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+  });
   server
     .listen()
     .then(({ url }) => console.log(`🔥 Server started! at ${url}`));
