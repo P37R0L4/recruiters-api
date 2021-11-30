@@ -5,9 +5,10 @@ export default {
     recruiters: async () => {
       try {
         const data = await Recruiters.find();
+        console.log(data);
         return await data;
       } catch (err) {
-        console.warn(err);
+        console.log(err);
       }
     },
     recruiter: async (_: any, { id }: any) => await Recruiters.findById(id),
