@@ -1,6 +1,6 @@
 type Game {
   _id: ID!
-  idRecruiter: String!
+  idRecruiter: String
   position: Int
   started: Boolean
   minigamePoints: Int
@@ -14,7 +14,7 @@ input GamesInput {
   position: Int
   started: Boolean
   minigamePoints: Int
-  idRecruiter: String!
+  idRecruiter: String
 }
 
 type Mutation {
