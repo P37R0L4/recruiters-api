@@ -2,7 +2,14 @@ import Recruiters from '../../../models/recruiters';
 
 export default {
   Query: {
-    recruiters: async () => await Recruiters.find(),
+    recruiters: async () => {
+      try {
+        const data = await Recruiters.find();
+        return await data;
+      } catch (err) {
+        console.warn(err);
+      }
+    },
     recruiter: async (_: any, { id }: any) => await Recruiters.findById(id),
   },
   Mutation: {
