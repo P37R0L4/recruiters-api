@@ -5,8 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "build": "rimraf ./build && tsc",
-    "start": "node build/index.js"
+    "build": "rimraf ./dist && tsc",
+    "start": "node dist/index.js",
+    "copy-schemas": "$(npm bin)/cpx src/**/*.graphql dist"
   },
   "dependencies": {
     "@graphql-toolkit/schema-merging": "^0.10.7",
@@ -14,6 +15,7 @@
     "@graphql-tools/merge": "^8.2.1",
     "@graphql-tools/schema": "^8.3.1",
     "apollo-server": "^3.5.0",
+    "cpx": "^1.5.0",
     "graphql": "^16.0.1",
     "graphql-subscriptions": "^2.0.0",
     "graphql-tools": "^8.2.0",
