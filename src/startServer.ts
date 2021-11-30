@@ -15,6 +15,6 @@ export function startServer(typeDefs: any, resolvers: any) {
     resolvers,
   });
   server
-    .listen()
+    .listen({ port: process.env.PORT || 4000 })
     .then(({ url }) => console.log(`🔥 Server started! at ${url}`));
 }
