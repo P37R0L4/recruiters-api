@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": "rimraf ./public && tsc && cpx src/**/*.gql public",
-    "start": "node public/index.js",
+    "start": "ts-node ./src/index.ts -e ts,js,gql",
     "copy-schemas": "cpx src/**/*.gql public"
   },
   "dependencies": {
