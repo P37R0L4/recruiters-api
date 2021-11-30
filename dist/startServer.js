@@ -6,8 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.startServer = void 0;
 const apollo_server_1 = require("apollo-server");
 const mongoose_1 = __importDefault(require("mongoose"));
+require("dotenv").config();
 function startServer(typeDefs, resolvers) {
-    mongoose_1.default.connect("mongodb+srv://recruiters:portfolio@cluster0.s3koe.mongodb.net/users?retryWrites=true&w=majority"),
+    mongoose_1.default.connect(process.env.MONGODB_URI),
         {
             useUnifiedTopology: true,
             useNewUrlParser: true,
