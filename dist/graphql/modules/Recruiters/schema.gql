@@ -1,0 +1,30 @@
+type Recruiter {
+  _id: ID!
+  name: String!
+  data: String
+  grade: Int
+  comment: String
+}
+
+type Query {
+  recruiters: [Recruiter!]!
+  recruiter(id: ID!): Recruiter!
+}
+
+input RecruitersInput {
+  name: String!
+  data: String!
+  grade: Int!
+  comment: String!
+}
+
+input RecruitersInputUpdate {
+  grade: Int!
+  comment: String!
+}
+
+type Mutation {
+  createRecruiter(values: RecruitersInput): Recruiter
+  updateRecruiter(id: ID!, values: RecruitersInputUpdate): Recruiter
+  deleteRecruiter(id: ID!): Boolean
+}

@@ -7,7 +7,7 @@
     "dev": "nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "node dist/index.js",
-    "copy-schemas": "$(npm bin)/cpx src/**/*.graphql dist"
+    "copy-schemas": "cpx src/**/*.gql dist"
   },
   "dependencies": {
     "@graphql-toolkit/schema-merging": "^0.10.7",
