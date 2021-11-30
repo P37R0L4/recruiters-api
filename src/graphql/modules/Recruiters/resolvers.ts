@@ -1,4 +1,4 @@
-import Recruiters from "../../../models/recruiters";
+import Recruiters from '../../../models/recruiters';
 
 export default {
   Query: {

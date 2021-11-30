@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const Schema = new mongoose.Schema({
   position: Number,
@@ -7,4 +7,4 @@ const Schema = new mongoose.Schema({
   idRecruiter: String,
 });
 
-export default mongoose.model("Game", Schema);
+export default mongoose.model('Game', Schema);

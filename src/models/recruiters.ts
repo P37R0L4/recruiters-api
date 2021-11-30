@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const Schema = new mongoose.Schema({
   name: String,
@@ -7,4 +7,4 @@ const Schema = new mongoose.Schema({
   comment: String,
 });
 
-export default mongoose.model("Recruiters", Schema);
+export default mongoose.model('Recruiters', Schema);
