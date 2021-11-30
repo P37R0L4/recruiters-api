@@ -1,5 +1,6 @@
 import { ApolloServer } from "apollo-server";
 import mongoose from "mongoose";
+require("dotenv").config();
 
 export function startServer(typeDefs: any, resolvers: any) {
   mongoose.connect(process.env.MONGODB_URI),
