@@ -2,9 +2,7 @@ import { ApolloServer } from "apollo-server";
 import mongoose from "mongoose";
 
 export function startServer(typeDefs: any, resolvers: any) {
-  mongoose.connect(
-    "mongodb+srv://recruiters:portfolio@cluster0.s3koe.mongodb.net/users?retryWrites=true&w=majority"
-  ),
+  mongoose.connect(process.env.MONGODB_URI),
     {
       useUnifiedTopology: true,
       useNewUrlParser: true,
