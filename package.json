@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": "rimraf ./build && tsc",
-    "start": "npm run build && node build/index.js"
+    "start": "ts-node ./src/index.ts -e ts,js,gql"
   },
   "dependencies": {
     "@graphql-toolkit/schema-merging": "^0.10.7",
