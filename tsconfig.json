@@ -6,7 +6,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strict": false,
-    "outDir": "./dist",
+    "outDir": "./public",
     "sourceMap": true,
     "rootDir": "src",
     "baseUrl": ".",

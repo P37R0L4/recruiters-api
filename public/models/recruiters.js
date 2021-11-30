@@ -5,10 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = new mongoose_1.default.Schema({
-    position: Number,
-    started: Boolean,
-    minigamePoints: Number,
-    idRecruiter: String,
+    name: String,
+    data: String,
+    grade: Number,
+    comment: String,
 });
-exports.default = mongoose_1.default.model("Game", Schema);
-//# sourceMappingURL=game.js.map
+exports.default = mongoose_1.default.model('Recruiters', Schema);
+//# sourceMappingURL=recruiters.js.map

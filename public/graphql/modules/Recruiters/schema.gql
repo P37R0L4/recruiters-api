@@ -24,7 +24,7 @@ input RecruitersInputUpdate {
 }
 
 type Mutation {
-  createRecruiter(values: RecruitersInput): Recruiter
-  updateRecruiter(id: ID!, values: RecruitersInputUpdate): Recruiter
+  createRecruiter(values: RecruitersInput): Recruiter!
+  updateRecruiter(id: ID!, values: RecruitersInputUpdate): Recruiter!
   deleteRecruiter(id: ID!): Boolean
 }
